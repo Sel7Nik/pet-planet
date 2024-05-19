@@ -38,11 +38,15 @@
   &_store {
     background-color: $green;
     background-image: url('/img/bg-cat.png'), url('/img/pattern.svg');
-    background-size: 839px;
+    background-size: 839px, auto;
   }
   @include laptop {
-    background-size: 640px;
+    background-size: 639px, auto;
   }
+  @include tablet {
+    background-size: 100%, auto;
+  }
+
   &__title {
     width: 810px;
     max-width: 100%;

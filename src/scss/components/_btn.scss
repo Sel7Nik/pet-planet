@@ -1,0 +1,64 @@
+@use '../variables' as *;
+@use '../media' as *;
+.btn {
+  width: max-content;
+  border-radius: 40px;
+  padding: 16px 24px;
+  color: $light;
+  background-color: $carrot;
+  font-weight: 700;
+  text-align: center;
+  outline: 2px solid transparent;
+  transition-property: background-color, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  &:hover {
+    background-color: $carrot;
+  }
+  &:focus-visible {
+    outline-color: #e76b23;
+  }
+
+  &_green {
+    background-color: $green;
+    &:hover {
+      background-color: #00772f;
+    }
+    &:focus-visible {
+      outline-color: $carrot;
+    }
+  }
+  &_purple {
+    background-color: $purple;
+    &:hover {
+      background-color: #981fd1;
+    }
+    &:focus-visible {
+      outline-color: $carrot;
+    }
+  }
+
+  &_arrow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    &:after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url('/img/arrow-to-store.svg') no-repeat center/contain;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @include laptop {
+    padding: 16px 36px;
+  }
+  @include mobile {
+    padding: 11px 24px;
+  }
+}

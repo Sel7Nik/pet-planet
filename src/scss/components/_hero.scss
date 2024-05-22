@@ -69,6 +69,9 @@
   &__text {
     max-width: 420px;
     margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include bigscreen {
       max-width: 540px;
@@ -80,48 +83,6 @@
     }
     @include mobile {
       margin-bottom: 20px;
-    }
-  }
-
-  &__store--link {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    border-radius: 40px;
-    padding: 16px 24px;
-    background-color: $green;
-    font-weight: 700;
-    text-align: center;
-    color: $light;
-    outline: 2px solid transparent;
-    transition-property: background-color, transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-
-    &:hover {
-      background-color: #00772f;
-    }
-    &:focus-visible {
-      outline-color: $carrot;
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
-    &:after {
-      content: '';
-      display: block;
-      width: 16px;
-      height: 16px;
-      background: url('/img/arrow-to-store.svg') no-repeat center/contain;
-    }
-
-    @include laptop {
-      padding: 16px 36px;
-    }
-    @include mobile {
-      padding: 11px 24px;
     }
   }
 }

@@ -1,11 +1,13 @@
 @use '../variables' as *;
 @use '../media' as *;
+@use '../fonts' as *;
 
 .store {
   padding-top: 120px;
   padding-bottom: 120px;
   &__header {
     display: flex;
+    gap: 28px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
@@ -58,18 +60,47 @@
     }
   }
 
-  &__cart-button {
+  &__cart {
+    &-button {
+      position: relative;
+      min-width: 28px;
+      min-height: 28px;
+    }
+
+    &-count {
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: $light;
+      line-height: 1;
+      top: 50%;
+      transform: translateY(-20%);
+    }
+    &-icon {
+    }
   }
 
   &__title {
+    font-weight: 700;
+    font-size: 52px;
+    color: $green;
+    margin-bottom: 32px;
   }
 
   &__card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 420px);
+    justify-content: center;
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card-item {
-  }
-
-  &__product {
+    display: flex;
   }
 }

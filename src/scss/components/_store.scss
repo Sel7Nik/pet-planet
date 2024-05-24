@@ -5,7 +5,7 @@
 .store {
   padding-top: 120px;
   padding-bottom: 120px;
-  &__header {
+  &__nav {
     display: flex;
     gap: 28px;
     justify-content: space-between;
@@ -63,8 +63,13 @@
   &__cart {
     &-button {
       position: relative;
-      min-width: 28px;
-      min-height: 28px;
+      width: 28px;
+      height: 28px;
+
+      @include bigscreen {
+        width: 42px;
+        height: 42px;
+      }
     }
 
     &-count {
@@ -77,8 +82,13 @@
       line-height: 1;
       top: 50%;
       transform: translateY(-20%);
+
+      @include bigscreen {
+        font-size: 18px;
+      }
     }
     &-icon {
+      width: 100%;
     }
   }
 

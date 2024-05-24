@@ -42,7 +42,7 @@
 
     <section class="store">
       <div class="container">
-        <div class="store__header">
+        <nav class="store__nav">
           <ul class="store__categories-list">
             <li class="store__category-item">
               <button
@@ -72,7 +72,7 @@
             </svg>
 
           </button>
-        </div>
+        </nav>
 
         <h2 class="store__title">Каталог</h2>
 
@@ -146,6 +146,20 @@
       </address>
     </div>
   </footer>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <img class="modal__image" src="/img/cart-dog.jpg" alt="dog">
+      <div class="modal__content">
+        <h2 class="modal__title">Корзина</h2>
+        <ul class="modal__cart-list">
+          <li class="modal__cart-item"></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="modal-overlay__close-button">&times;</button>
+  </div>
 </body>
 
 </html>

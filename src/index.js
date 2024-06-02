@@ -20,7 +20,7 @@ const createProductCard = ({ name, price, photoUrl }) => {
       <img class="product__image" src="${API_URL}${photoUrl}" alt=${name} width='388' height='261'>
       <h3 class="product__title">${name}</h3>
       <p class="product__price">${price}&nbsp;₽</p>
-      <button class="product__btn-add-cart btn btn_purple">Заказать</button>
+      <button class="product__btn-add-cart">Заказать</button>
   </article>`
 
   return productCard
@@ -77,12 +77,12 @@ buttons.forEach((button) => {
 })
 
 const renderCartItems = () => {
-  cartList.textContent = ''
+  // cartList.textContent = ''
   const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]')
   cartItems.forEach((item) => {
     const listItem = document.createElement('li')
     listItem.textContent = item
-    cartList.append(listItem)
+    // cartList.append(listItem)
   })
 }
 

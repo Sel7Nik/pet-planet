@@ -97,6 +97,12 @@
     font-size: 52px;
     color: $green;
     margin-bottom: 32px;
+    @include tablet {
+      font-size: 40px;
+    }
+    @include mobile {
+      font-size: 28px;
+    }
   }
 
   &__card-list {

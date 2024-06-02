@@ -55,6 +55,16 @@
   }
 
   &__btn-add-cart {
+    border-radius: 24px;
+    padding: 16px 24px;
     width: 100%;
+    background-color: #a346cf;
+    color: #fdeee3;
+    @include tablet {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }
